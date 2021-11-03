@@ -1,11 +1,8 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ToDoList {
     public static void main(String[] args) {
-        int capacity = 10;
-        int size = 0;
-        String[] todos = new String[capacity];
+DynamicArray todos = new DynamicArray();
         Scanner scanner = new Scanner(System.in);
         do {
 
@@ -16,12 +13,14 @@ public class ToDoList {
                 case 1 -> {
                     System.out.println("Enter your task.");
                     scanner.nextLine();
-                    todos[size++] = scanner.nextLine();
+
+
+                    todos.add(scanner.nextLine());
 
                 }
 
                 case 2 -> {
-                    System.out.println(Arrays.toString(todos));
+                    System.out.println(todos);
                 }
                 default -> {
                     return;
